@@ -555,7 +555,7 @@ void VoxelGraphEditor::_on_graph_edit_disconnection_request(
 	_undo_redo->commit_action();
 }
 
-void VoxelGraphEditor::_on_graph_edit_delete_nodes_request() {
+void VoxelGraphEditor::_on_graph_edit_delete_nodes_request(Array node_names) {
 	std::vector<VoxelGraphEditorNode *> to_erase;
 
 	for (int i = 0; i < _graph_edit->get_child_count(); ++i) {
